@@ -5,7 +5,7 @@ import secrets
 
 security = HTTPBasic()
 def verificar_peticion(credenciales:HTTPBasicCredentials = Depends(security)):
-    usuarioAuth= secrets.compare_digest(credenciales.username,"maria")
+    usuarioAuth= secrets.compare_digest(credenciales.username,"marlon")
     contraAuth = secrets.compare_digest(credenciales.password, "123456")
 
     if not (usuarioAuth and contraAuth):
